@@ -29,9 +29,12 @@ body {
 }
 
 .intro-component {
+    display: flex;
+    flex-direction: column;
     padding: 10rem 2rem;
 }
 .description-box {
+    flex-basis: 50%;
     display: flex;
     flex-direction: column;
     gap: 2.8rem;
@@ -51,7 +54,9 @@ h1 {
     line-height: 1.8;
     font-weight: 600;
 }
-
+.premium-plan {
+    flex-basis: 50%;
+}
 .free-trial {
     text-align: center;
     background: var(--color-blue);
@@ -154,26 +159,43 @@ footer {
     padding: 0 2rem;
 }
 
+
+@media screen and (min-width: 600px) {
+   .intro-component {
+       max-width: 70vw;
+       margin: 0 auto;
+   }
+   h1 {
+       font-size: 3.75rem;
+   }
+}
 @media screen and (min-width: 1000px) {
-    .intro-component {
-        display: flex;
+    body {
+        background: url(images/bg-intro-desktop.png) no-repeat var(--color-red);
+    }
+    .intro-component {        
+        flex-direction: row;
         padding: 10rem;
         gap: 3rem;
+        max-width: 100%;
     }
     .description-box {
         justify-content: center;
         text-align: left;
     }
     h1 {
-        font-size: 3.75rem;
+        font-size: 5rem;
+        max-width: 60rem;
         padding: 0;
     }
     .description-text {
         font-size: 1.6rem;
         line-height: 1.5;
     }
+    
     .signup {
-        width: 40rem;
+        max-width: 100%;
+        padding: 4rem;
     }
     .free-trial {
         font-size: 1.4rem;
@@ -184,19 +206,3 @@ footer {
     }
 }
 
-@media screen and (min-width: 1000px) {
-    body {
-        background: url(images/bg-intro-desktop.png) no-repeat var(--color-red);
-    }
-    .intro-component {
-        padding: 14rem;
-    }
-    h1 {
-        font-size: 5rem;
-        max-width: 60rem;
-    }
-    .signup {
-        width: 54rem;
-        padding: 4rem;
-    }
-}
