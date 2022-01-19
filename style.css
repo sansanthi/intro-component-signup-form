@@ -62,7 +62,7 @@ h1 {
     background: var(--color-blue);
     padding: 2rem 6rem;
     border-radius: 1rem;
-    box-shadow: 0 0.75rem 0.75rem rgba(0, 0, 0, 0.4);
+    box-shadow: 0 0.75rem 0rem rgba(0, 0, 0, 0.1);
     margin-bottom: 1.5rem;
 }
 .highlight {
@@ -73,12 +73,14 @@ h1 {
     padding: 2rem;
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
     border-radius: 1rem;
     box-shadow: 0 0.75rem 0.75rem rgba(0, 0, 0, 0.4);
 }
 .input-control {
     position: relative;
+}
+label {
+    display: none;
 }
 input {
     display: block;
@@ -136,7 +138,8 @@ input:active {
     text-transform: uppercase;
     border-color: transparent;
     border-radius: 0.5rem;
-    border: 2px solid var(--color-green);
+    border: 1px solid hsla(155, 46%, 22%, 0.2);
+    border-bottom: 4px solid hsla(155, 46%, 22%, 0.3);
     box-shadow: 0 0.75rem 0.75rem rgba(0, 0, 0, 0.4);
     transition: all 0.3s ease-in-out;
 }
@@ -173,11 +176,11 @@ footer {
     body {
         background: url(images/bg-intro-desktop.png) no-repeat var(--color-red);
     }
-    .intro-component {        
+    .intro-component {    
+        max-width: 100%;    
         flex-direction: row;
         padding: 10rem;
-        gap: 3rem;
-        max-width: 100%;
+        gap: 3rem;        
     }
     .description-box {
         justify-content: center;
@@ -192,7 +195,9 @@ footer {
         font-size: 1.6rem;
         line-height: 1.5;
     }
-    
+    .premium-plan {
+        padding: 4rem;
+    }
     .signup {
         max-width: 100%;
         padding: 4rem;
